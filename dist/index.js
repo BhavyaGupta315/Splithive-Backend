@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function greet(name) {
-    return `Hello, ${name}`;
-}
-console.log(greet("Bhavya"));
+import connectDB from "./db/index.js";
+import * as dotenv from 'dotenv';
+dotenv.config();
+connectDB();
 //# sourceMappingURL=index.js.map

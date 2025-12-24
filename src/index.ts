@@ -1,5 +1,14 @@
-function greet(name : string) : string{
-	return `Hello, ${name}`;
-}
+import { app } from "./app.js";
+import connectDB from "./db/index.js";
+import * as dotenv from 'dotenv';
 
-console.log(greet("Bhavya"));
+dotenv.config();
+connectDB()
+.then(() => {
+	app.listen(process.env.PORT || 3000, () => {
+		console.log(`Server is running at port : ${process.env.PORT}`)
+	});
+})
+.catch((err) => {
+	console.log(`MongoDB Connection Failed - ${err}`);
+});

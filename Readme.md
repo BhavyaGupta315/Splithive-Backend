@@ -9,7 +9,7 @@ Database - MongoDB
 src/
  ├─ models/        # Mongoose 
  ├─ controllers/   # HTTP request handlers
- ├─ services/      # Business logic
+ ├─ utils/         # Business logic
  ├─ routes/        # Express routes
  ├─ middleware/    # Auth, Validation, Rate-limit
  └─ index.ts
